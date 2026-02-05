@@ -1,20 +1,20 @@
 " Vim syntax file
 " Language: Feral
-" Maintainer: Electrux Redsworth
-" Latest Revision: 15 March 2020
+" Maintainer: Electrux
+" Latest Revision: 28 Nov. 2025
 
 if exists("b:current_syntax")
-	finish
+    finish
 endif
 
 " Keywords
-syn keyword keywords import mload let struct trait fn return if elif else for in while continue break or
+syn keyword keywords fn if elif else for in while return continue break or defer let inline
 syn keyword selfkeyword self
 syn keyword nil nil
 syn keyword booleans true false
 
 " Types
-syn match types '\w\+_t\b'
+syn match types '\w\+Ty\b'
 
 " Assignments - contains is added to give Types a higher priority
 syn match assigns '\zs\w\+\ze =[^=]' contains=types
